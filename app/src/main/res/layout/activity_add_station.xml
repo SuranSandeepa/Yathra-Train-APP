@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStation"
+    android:background="@drawable/train_bg_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toast_train3" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Station"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/bungee_regular"/>
+
+        </LinearLayout>
+
+
+        <!--Train Name-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Station Name"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStationNameAS"
+                android:drawableLeft="@drawable/ic_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--No Of Passengers-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Station Master's Name"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStationMasterAS"
+                android:drawableLeft="@drawable/ic_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Train Category-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City of Station"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStationCityAS"
+                android:drawableLeft="@drawable/ic_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Save btn-->
+        <Button
+            android:drawableLeft="@drawable/ic_111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/CadetBlue"
+            android:onClick="insertStation"
+            android:padding="10dp"
+            android:text="Save"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+<!--        <Button-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Show All"-->
+<!--            android:onClick="showStations"-->
+<!--            android:drawableLeft="@drawable/ic_111"-->
+<!--            android:backgroundTint="@color/CadetBlue"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="15dp"-->
+<!--            android:padding="10dp"/>-->
+
+    </LinearLayout>
+
+</ScrollView>

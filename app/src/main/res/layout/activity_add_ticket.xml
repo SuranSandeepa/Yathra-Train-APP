@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTicket"
+    android:background="@drawable/train_bg_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/toast_train3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make Ticket"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/bungee_regular"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Book Date"
+            android:padding="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTicketDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_11"
+                android:focusable="true"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Time"
+            android:padding="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTicketTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_11"
+                android:focusable="true"
+                android:inputType="time" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:hint=" Class"
+            android:padding="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextClassType"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Arrive Time-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" From"
+            android:padding="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStartFrom"
+                android:drawableLeft="@drawable/ic_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Depart Time-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" To"
+            android:padding="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEndTo"
+                android:drawableLeft="@drawable/ic_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Ticket Name-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Price"
+            android:padding="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Save btn-->
+        <Button
+            android:id="@+id/btnCreateTicket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_111"
+            android:backgroundTint="@color/CadetBlue"
+            android:onClick="insertTicket"
+            android:padding="7dp"
+            android:text="Save"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
+<!--        <Button-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawableLeft="@drawable/ic_111"-->
+<!--            android:backgroundTint="@color/CadetBlue"-->
+<!--            android:onClick="ShowTickets"-->
+<!--            android:padding="7dp"-->
+<!--            android:text="Show All Tickets"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="15dp" />-->
+
+    </LinearLayout>
+
+</ScrollView>

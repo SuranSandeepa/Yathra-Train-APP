@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateTimetable"
+    android:background="@drawable/train_bg_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toast_train3" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Timetable"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/bungee_regular"/>
+
+        </LinearLayout>
+
+
+        <!--Route Name-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Route Name"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextRoutNameCT"
+                android:drawableLeft="@drawable/ic_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Date-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:hint="Date"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDateCT"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_calendar"
+                    android:inputType="date" />
+
+                <!--  <Button
+                      android:id="@+id/btnCalender"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:background="@drawable/ic_calendar" />-->
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Arrive Time-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Arrive Time"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextArriveTimeCT"
+                android:onClick="popTimePicker"
+                android:drawableLeft="@drawable/ic_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Depart Time-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Depart Time"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDepartTimeCT"
+                android:drawableLeft="@drawable/ic_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="popTimePickerDepart"
+                android:inputType="time" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Train Name-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Train Name"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTrainNameCT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_11"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Save btn-->
+        <Button
+            android:id="@+id/btnCreateTimetableCT"
+            android:drawableLeft="@drawable/ic_111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/CadetBlue"
+            android:onClick="insertTimetable"
+            android:padding="10dp"
+            android:text="Save"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+<!--        <Button-->
+<!--            android:drawableLeft="@drawable/ic_111"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/CadetBlue"-->
+<!--            android:onClick="showTimetables"-->
+<!--            android:padding="10dp"-->
+<!--            android:text="Show All Timetables"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="15dp"/>-->
+
+    </LinearLayout>
+
+</ScrollView>
