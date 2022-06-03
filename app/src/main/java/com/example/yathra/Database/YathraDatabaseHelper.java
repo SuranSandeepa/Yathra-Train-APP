@@ -353,7 +353,7 @@ public class YathraDatabaseHelper extends SQLiteOpenHelper {
         return result;
     }
 
-    //Ticket Function
+    //Ticket Function-------------------------------------------------------------------------------
 
     //Insert
     public long addTicket(TicketModel ticketM) {
